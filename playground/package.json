@@ -1,0 +1,23 @@
+{
+  "name": "ui-playground",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare": "runable prepare",
+    "build": "runable build",
+    "dev": "tsx watch server.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "fastify": "^5.10.0",
+    "runable": "1.1.0",
+    "vue": "^3.5.0",
+    "vue-router": "^5.2.0"
+  },
+  "devDependencies": {
+    "@runablejs/cli": "1.1.0",
+    "@types/node": "^24.13.3",
+    "tsx": "^4.23.12",
+    "typescript": "^6.0.3"
+  }
+}

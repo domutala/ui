@@ -1,0 +1,8 @@
+packages:
+  - playground
+allowBuilds:
+  esbuild: true
+  vue-demi: true
+minimumReleaseAgeExclude:
+  - '@runablejs/cli@1.1.0'
+  - runable@1.1.0

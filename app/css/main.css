@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* The consuming app is outside this module, so Tailwind cannot discover the
+   component classes automatically. Keep the module's UI sources explicit. */
+@source "../components/ui";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Public brand token: override this value in each consuming application. */
+  --accent-color: oklch(57.8% 0.228 260.025);
+  --accent-color-foreground: #ffffff;
+  --background: #f8f7f4;
+  --foreground: #262521;
+  --card: #ffffff;
+  --card-foreground: #262521;
+  --popover: #ffffff;
+  --popover-foreground: #262521;
+  --primary: var(--accent-color);
+  --primary-foreground: var(--accent-color-foreground);
+  --secondary: color-mix(in oklch, var(--accent-color) 12%, transparent);
+  --secondary-foreground: var(--accent-color);
+  --muted: #f3f1ed;
+  --muted-foreground: #77736b;
+  --accent: color-mix(in oklch, var(--accent-color) 12%, transparent);
+  --accent-foreground: var(--accent-color);
+  --destructive: #ef4444;
+  --danger: #dc2626;
+  --danger-foreground: #ffffff;
+  --info: #2563eb;
+  --info-foreground: #ffffff;
+  --success: #15803d;
+  --success-foreground: #ffffff;
+  --warning: #d97706;
+  --warning-foreground: #ffffff;
+  --neutral: #57534e;
+  --neutral-foreground: #ffffff;
+  --border: #e7e3dc;
+  --input: #e7e3dc;
+  --ring: var(--accent-color);
+  --radius: 0.625rem;
+  --header-height: 4rem;
+}
+
+:root.dark {
+  color-scheme: dark;
+  --background: #171816;
+  --foreground: #f4f2ed;
+  --card: #22231f;
+  --card-foreground: #f4f2ed;
+  --popover: #252620;
+  --popover-foreground: #f4f2ed;
+  --primary: var(--accent-color);
+  --primary-foreground: var(--accent-color-foreground);
+  --secondary: color-mix(in oklch, var(--accent-color) 18%, transparent);
+  --secondary-foreground: color-mix(in oklch, var(--accent-color) 75%, white);
+  --muted: #2b2c27;
+  --muted-foreground: #aaa69d;
+  --accent: color-mix(in oklch, var(--accent-color) 18%, transparent);
+  --accent-foreground: color-mix(in oklch, var(--accent-color) 75%, white);
+  --destructive: #f87171;
+  --danger: #f87171;
+  --danger-foreground: #262521;
+  --info: #60a5fa;
+  --info-foreground: #172033;
+  --success: #4ade80;
+  --success-foreground: #14251a;
+  --warning: #fbbf24;
+  --warning-foreground: #29200e;
+  --neutral: #a8a29e;
+  --neutral-foreground: #1c1917;
+  --border: #3b3c36;
+  --input: #3b3c36;
+  --ring: var(--accent-color);
+  --color-canvas: #171816;
+  --color-surface: #22231f;
+  --color-ink: #f4f2ed;
+  --color-line: #3b3c36;
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.18), 0 8px 24px rgb(0 0 0 / 0.2);
+  --shadow-float: 0 12px 36px rgb(0 0 0 / 0.32);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-neutral: var(--neutral);
+  --color-neutral-foreground: var(--neutral-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-heading: var(--font-sans);
+}
+
+@theme {
+  --font-sans: "Inter", "Avenir Next", "Segoe UI", sans-serif;
+
+  --color-canvas: #f8f7f4;
+  --color-surface: #ffffff;
+  --color-ink: #262521;
+  --color-line: #e7e3dc;
+  --color-brand-50: color-mix(in oklch, var(--accent-color) 8%, white);
+  --color-brand-100: color-mix(in oklch, var(--accent-color) 16%, white);
+  --color-brand-200: color-mix(in oklch, var(--accent-color) 30%, white);
+  --color-brand-300: color-mix(in oklch, var(--accent-color) 48%, white);
+  --color-brand-400: color-mix(in oklch, var(--accent-color) 72%, white);
+  --color-brand-500: var(--accent-color);
+  --color-brand-600: color-mix(in oklch, var(--accent-color) 86%, black);
+  --color-brand-700: color-mix(in oklch, var(--accent-color) 72%, black);
+
+  --shadow-card:
+    0 1px 2px rgb(38 37 33 / 0.04), 0 8px 24px rgb(38 37 33 / 0.06);
+  --shadow-float: 0 12px 36px rgb(38 37 33 / 0.12);
+
+  --radius-card: 0.5rem;
+}
+
+@layer base {
+  :root {
+    color: var(--color-ink);
+    background: var(--color-canvas);
+    font-family: var(--font-sans);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    min-width: 320px;
+    background: var(--color-canvas);
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  button,
+  input,
+  textarea {
+    font: inherit;
+  }
+
+  button,
+  [role="button"] {
+    cursor: pointer;
+  }
+
+  ::selection {
+    color: var(--color-ink);
+    background: var(--color-brand-200);
+  }
+
+  :focus-visible {
+    outline: 3px solid color-mix(in oklch, var(--accent-color) 40%, transparent);
+    outline-offset: 3px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-none;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
