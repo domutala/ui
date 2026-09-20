@@ -1,5 +1,5 @@
 ---
-"@domutala/ui": minor
+"domutala-ui": minor
 ---
 
 Ajoute les premières fondations publiques du design system Domutala UI :
