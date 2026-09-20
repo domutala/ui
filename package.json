@@ -3,16 +3,24 @@
   "version": "0.1.0",
   "packageManager": "pnpm@11.19.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/domutala/ui"
+  },
+  "homepage": "https://github.com/domutala/ui#readme",
+  "bugs": {
+    "url": "https://github.com/domutala/ui/issues"
+  },
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.js"
+      "types": "./dist/runable.config.d.ts",
+      "import": "./dist/runable.config.js",
+      "default": "./dist/runable.config.js"
     }
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/runable.config.js",
+  "module": "./dist/runable.config.js",
+  "types": "./dist/runable.config.d.ts",
   "files": [
     "dist"
   ],
