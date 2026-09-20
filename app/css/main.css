@@ -42,7 +42,7 @@
   --input: #e7e3dc;
   --ring: var(--accent-color);
   --radius: 0.625rem;
-  --header-height: 4rem;
+  --header-height: 3rem;
 }
 
 :root.dark {
