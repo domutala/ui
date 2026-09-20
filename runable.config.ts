@@ -3,7 +3,7 @@ import { defineModule } from "runable";
 
 export default defineModule({
   configKey: "ui",
-  meta: { name: "@domutala/ui" },
+  meta: { name: "domutala-ui" },
 
   ssr: false,
 

@@ -11,7 +11,7 @@ thème clair/sombre et une couleur d’accent personnalisable par application.
 Installe le package dans une application Runable :
 
 ```bash
-pnpm add @domutala/ui
+pnpm add domutala-ui
 ```
 
 Puis active le module dans `runable.config.ts` :
@@ -20,7 +20,7 @@ Puis active le module dans `runable.config.ts` :
 import { defineConfig } from "runable";
 
 export default defineConfig({
-  modules: ["@domutala/ui"],
+  modules: ["domutala-ui"],
 });
 ```
 
