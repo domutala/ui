@@ -5,6 +5,8 @@ export default defineModule({
   configKey: "ui",
   meta: { name: "@domutala/ui" },
 
+  ssr: false,
+
   css: ["./app/css/main.css"],
 
   alias: { "@ui": join(import.meta.dirname, "./app") },

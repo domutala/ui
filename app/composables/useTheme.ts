@@ -12,7 +12,10 @@ function applyTheme(value: AppTheme) {
   document.documentElement.style.colorScheme = value;
   document
     .querySelector('meta[name="theme-color"]')
-    ?.setAttribute("content", value === "dark" ? "#171816" : "#f8f7f4");
+    ?.setAttribute(
+      "content",
+      value === "dark" ? "oklch(14.5% 0 0)" : "#f8f7f4",
+    );
 }
 
 export function useTheme() {

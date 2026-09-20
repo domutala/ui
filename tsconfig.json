@@ -3,5 +3,10 @@
   "references": [
     { "path": ".app/tsconfig.app.json" },
     { "path": "tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "paths": {
+      "@ui/*": ["./app/*"]
+    }
+  }
 }

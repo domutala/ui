@@ -10,12 +10,12 @@
   },
   "dependencies": {
     "fastify": "^5.10.0",
-    "runable": "1.1.0",
+    "runable": "1.2.1",
     "vue": "^3.5.0",
     "vue-router": "^5.2.0"
   },
   "devDependencies": {
-    "@runablejs/cli": "1.1.0",
+    "@runablejs/cli": "1.2.1",
     "@types/node": "^24.13.3",
     "tsx": "^4.23.12",
     "typescript": "^6.0.3"
